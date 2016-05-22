@@ -12,6 +12,11 @@
 		D07AD7CD1CF08D5100801D0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D07AD7CB1CF08D5100801D0F /* Main.storyboard */; };
 		D07AD7CF1CF08D5100801D0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D07AD7CE1CF08D5100801D0F /* Assets.xcassets */; };
 		D07AD7D21CF08D5100801D0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D07AD7D01CF08D5100801D0F /* LaunchScreen.storyboard */; };
+		D07AD7DF1CF0E7AE00801D0F /* RefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07AD7DE1CF0E7AE00801D0F /* RefreshView.swift */; };
+		D07AD7E21CF0E7C700801D0F /* KeyValueObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07AD7E11CF0E7C700801D0F /* KeyValueObserver.swift */; };
+		D07AD8061CF192F900801D0F /* RefreshViewWaveLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07AD8051CF192F900801D0F /* RefreshViewWaveLayer.swift */; };
+		D0C19E7A1CF1CCD1009134D7 /* RefreshViewDropletLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C19E791CF1CCD1009134D7 /* RefreshViewDropletLayer.swift */; };
+		D0C19E7C1CF1D4BA009134D7 /* RefreshViewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C19E7B1CF1D4BA009134D7 /* RefreshViewLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		D07AD7CE1CF08D5100801D0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D07AD7D11CF08D5100801D0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D07AD7D31CF08D5100801D0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D07AD7DE1CF0E7AE00801D0F /* RefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshView.swift; sourceTree = "<group>"; };
+		D07AD7E11CF0E7C700801D0F /* KeyValueObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueObserver.swift; sourceTree = "<group>"; };
+		D07AD8051CF192F900801D0F /* RefreshViewWaveLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshViewWaveLayer.swift; sourceTree = "<group>"; };
+		D0C19E791CF1CCD1009134D7 /* RefreshViewDropletLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshViewDropletLayer.swift; sourceTree = "<group>"; };
+		D0C19E7B1CF1D4BA009134D7 /* RefreshViewLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshViewLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 		D07AD7C61CF08D5100801D0F /* PullToRefresh */ = {
 			isa = PBXGroup;
 			children = (
+				D07AD7D91CF0E51500801D0F /* Classes */,
 				D07AD7C71CF08D5100801D0F /* AppDelegate.swift */,
 				D07AD7C91CF08D5100801D0F /* ViewController.swift */,
 				D07AD7CB1CF08D5100801D0F /* Main.storyboard */,
@@ -62,6 +73,42 @@
 				D07AD7D31CF08D5100801D0F /* Info.plist */,
 			);
 			path = PullToRefresh;
+			sourceTree = "<group>";
+		};
+		D07AD7D91CF0E51500801D0F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D07AD7E01CF0E7B600801D0F /* Helpers */,
+				D07AD7DA1CF0E51500801D0F /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D07AD7DA1CF0E51500801D0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D07AD7DD1CF0E7A300801D0F /* RefreshView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D07AD7DD1CF0E7A300801D0F /* RefreshView */ = {
+			isa = PBXGroup;
+			children = (
+				D07AD7DE1CF0E7AE00801D0F /* RefreshView.swift */,
+				D0C19E7B1CF1D4BA009134D7 /* RefreshViewLayer.swift */,
+				D07AD8051CF192F900801D0F /* RefreshViewWaveLayer.swift */,
+				D0C19E791CF1CCD1009134D7 /* RefreshViewDropletLayer.swift */,
+			);
+			path = RefreshView;
+			sourceTree = "<group>";
+		};
+		D07AD7E01CF0E7B600801D0F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D07AD7E11CF0E7C700801D0F /* KeyValueObserver.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D07AD7DF1CF0E7AE00801D0F /* RefreshView.swift in Sources */,
 				D07AD7CA1CF08D5100801D0F /* ViewController.swift in Sources */,
 				D07AD7C81CF08D5100801D0F /* AppDelegate.swift in Sources */,
+				D07AD8061CF192F900801D0F /* RefreshViewWaveLayer.swift in Sources */,
+				D07AD7E21CF0E7C700801D0F /* KeyValueObserver.swift in Sources */,
+				D0C19E7C1CF1D4BA009134D7 /* RefreshViewLayer.swift in Sources */,
+				D0C19E7A1CF1CCD1009134D7 /* RefreshViewDropletLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +301,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PullToRefresh/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = gk.PullToRefresh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -260,9 +312,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PullToRefresh/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = gk.PullToRefresh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -286,6 +338,7 @@
 				D07AD7D81CF08D5100801D0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
