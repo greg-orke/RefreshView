@@ -24,28 +24,13 @@ class RefreshView: UIView {
     
     private weak var scrollView: UIScrollView?
     
-    private var state: State = .UnderThreshold {
-        didSet {
-            if oldValue != state {
-                switch state {
-                case .OverThreshold:
-                    scrollView?.contentInset.top += 100
-                default:
-                    break
-                }
-            }
-        }
-    }
+    private var state: State = .UnderThreshold
     
     private var refreshLayer: RefreshViewLayer {
         return self.layer as! RefreshViewLayer
     }
     
     private let dropletLayer = RefreshViewDropletLayer()
-    
-    private var drawLayer: CAShapeLayer {
-        return self.layer as! CAShapeLayer
-    }
     
     init(scrollView: UIScrollView) {
         let height: CGFloat = 120
